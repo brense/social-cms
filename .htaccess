@@ -1,0 +1,7 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteRule ^admin/(.*)$ public_html/admin/$1 [QSA]
+
+RewriteCond %{REQUEST_URI} !/admin/
+RewriteRule ^(.*)$ public_html/$1 [QSA]
